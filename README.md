@@ -1,0 +1,2 @@
+# Flutter---compute
+De studiu
