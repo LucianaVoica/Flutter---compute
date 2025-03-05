@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_test1/presentation/widgets/input_form.dart';
 
 import 'package:flutter_test1/services/compute_service.dart';
@@ -46,7 +45,7 @@ class MyCustomFormState extends State<MyCustomForm> {
       key: formKey,
       child: Column(
         children: <Widget>[
-          SizedBox(height: 80),
+          SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -67,11 +66,11 @@ class MyCustomFormState extends State<MyCustomForm> {
                 );
               });
             },
-
-            style: ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll<Color>(Colors.blue),
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+            child: Text(
+              "Suma",
+              style: TextStyle(color: Colors.black, fontSize: 24),
             ),
-            child: Text("Suma"),
           ),
 
           SizedBox(height: 20),
@@ -85,10 +84,11 @@ class MyCustomFormState extends State<MyCustomForm> {
                 );
               });
             },
-            style: ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll<Color>(Colors.green),
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+            child: Text(
+              "Diferenta",
+              style: TextStyle(color: Colors.black, fontSize: 24),
             ),
-            child: Text("Diferenta"),
           ),
 
           SizedBox(height: 20),
@@ -102,9 +102,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                 );
               });
             },
-            style: ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll<Color>(Colors.black),
-            ),
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
             child: Text("Produs", style: TextStyle(color: Colors.white)),
           ),
 
@@ -119,9 +117,6 @@ class MyCustomFormState extends State<MyCustomForm> {
                 );
               });
             },
-            style: ButtonStyle(
-              backgroundColor: WidgetStatePropertyAll<Color>(Colors.grey),
-            ),
             child: Text("Impartire", style: TextStyle(color: Colors.red)),
           ),
           SizedBox(height: 20),
