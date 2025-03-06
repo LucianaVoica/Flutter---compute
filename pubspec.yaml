@@ -38,6 +38,7 @@ dependencies:
   english_words: ^4.0.0
   provider: ^6.1.2
   dart_ipify: ^1.1.1
+  image_picker: ^1.1.2
 
 
 dev_dependencies:

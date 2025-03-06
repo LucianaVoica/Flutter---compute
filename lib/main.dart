@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme, //? am extras tema
       themeMode: ThemeMode.system,
       darkTheme: AppTheme.lightTheme,
+
       //! de aici
       home: LandingPage(appTitle: appTitle),
       //! pana aici este o pagina separata trebuie sa arate asa home: LandingPage() orice alta denumire atat
