@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test1/app_router/app_router.dart';
-import 'package:flutter_test1/presentation/pages/landing_page.dart';
 import 'package:flutter_test1/presentation/pages/landing_page2.dart';
 import 'package:flutter_test1/theme/theme.dart';
 

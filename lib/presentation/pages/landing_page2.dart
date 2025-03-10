@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test1/presentation/pages/new_page.dart';
-import 'package:flutter_test1/presentation/pages/new_page2.dart';
-import 'package:flutter_test1/presentation/pages/page_1.dart';
 import 'package:flutter_test1/presentation/widgets/avatar.dart';
+import 'package:flutter_test1/presentation/widgets/carduri/lista_card.dart';
 import 'package:flutter_test1/presentation/widgets/my_form.dart';
 
 class LandingPageV2 extends StatefulWidget {
@@ -33,8 +31,8 @@ class _LandingPageV2State extends State<LandingPageV2> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.file_copy),
+            label: 'Carduri',
           ),
         ],
       ),
@@ -44,11 +42,11 @@ class _LandingPageV2State extends State<LandingPageV2> {
   Widget getCurrentPage() {
     switch (pageIndex) {
       case 0:
-        return Page1();
+        return MyCustomForm();
       case 1:
-        return Page2();
+        return ListaCarduri();
       default:
-        return Page1();
+        return MyCustomForm();
     }
   }
 }
