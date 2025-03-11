@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test1/presentation/widgets/input_form.dart';
+import 'package:flutter_test1/presentation/widgets/calculator/form_field.dart';
 
 import 'package:flutter_test1/services/compute_service.dart';
 import 'package:flutter_test1/common/operation_enum.dart';
 
-class MyCustomForm extends StatefulWidget {
-  const MyCustomForm({super.key});
+class CalculatorForm extends StatefulWidget {
+  const CalculatorForm({super.key});
 
   @override
-  MyCustomFormState createState() {
-    return MyCustomFormState();
+  CalculatorFormState createState() {
+    return CalculatorFormState();
   }
 }
 
-class MyCustomFormState extends State<MyCustomForm> {
+class CalculatorFormState extends State<CalculatorForm> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   late final TextEditingController controller1;
   late final TextEditingController controller2;

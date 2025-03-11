@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test1/presentation/pages/landing_page2.dart';
+import 'package:flutter_test1/presentation/pages/landing_page.dart';
 import 'package:flutter_test1/theme/theme.dart';
 
 //! FOARTE IMPORTANT -> main-ul vrem sa ramana cat mai curat si cu cat mai putin cod
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme, //? am extras tema
       themeMode: ThemeMode.system,
       darkTheme: AppTheme.lightTheme,
-      home: LandingPageV2(appTitle: appTitle),
+      home: LandingPage(appTitle: appTitle),
       // onGenerateRoute: AppRouter.generateRoute,
     );
   }

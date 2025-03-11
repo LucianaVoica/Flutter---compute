@@ -30,7 +30,7 @@ class _AvatarState extends State<Avatar> {
         return Wrap(
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 10, 20, 2),
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 2),
               child: ListTile(
                 leading: Icon(Icons.camera_alt),
                 title: Text("Fa o poza"),
@@ -38,7 +38,7 @@ class _AvatarState extends State<Avatar> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(20, 2, 20, 10),
+              padding: const EdgeInsets.fromLTRB(20, 2, 20, 10),
               child: ListTile(
                 leading: Icon(Icons.photo_library),
                 title: Text("Alege din galerie"),
@@ -54,7 +54,7 @@ class _AvatarState extends State<Avatar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(right: 16),
+      padding: const EdgeInsets.only(right: 16),
       child: GestureDetector(
         onTap: showImage,
         child: CircleAvatar(
