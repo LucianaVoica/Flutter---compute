@@ -15,14 +15,13 @@ class MyApp extends StatelessWidget {
     const appTitle =
         'Calculator'; //! extrage  constantele intr-o clasa separata;
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: appTitle,
       theme: AppTheme.lightTheme, //? am extras tema
       themeMode: ThemeMode.system,
       darkTheme: AppTheme.lightTheme,
-
-      //! de aici
       home: LandingPage(appTitle: appTitle),
-      //! pana aici este o pagina separata trebuie sa arate asa home: LandingPage() orice alta denumire atat
+      // onGenerateRoute: AppRouter.generateRoute,
     );
   }
 }
