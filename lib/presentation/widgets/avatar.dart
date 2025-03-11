@@ -26,22 +26,22 @@ class _AvatarState extends State<Avatar> {
   void showImage() {
     showModalBottomSheet(
       context: context,
-      builder: (context) {
+      builder: (BuildContext context) {
         return Wrap(
-          children: [
+          children: <Widget>[
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 10, 20, 2),
               child: ListTile(
-                leading: Icon(Icons.camera_alt),
-                title: Text("Fa o poza"),
+                leading: const Icon(Icons.camera_alt),
+                title: const Text('Fa o poza'),
                 onTap: () => pickImage(ImageSource.camera),
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 2, 20, 10),
               child: ListTile(
-                leading: Icon(Icons.photo_library),
-                title: Text("Alege din galerie"),
+                leading: const Icon(Icons.photo_library),
+                title: const Text('Alege din galerie'),
                 onTap: () => pickImage(ImageSource.gallery),
               ),
             ),
@@ -62,7 +62,7 @@ class _AvatarState extends State<Avatar> {
           backgroundImage: image != null ? FileImage(image!) : null,
           child:
               image == null
-                  ? Icon(Icons.person, size: 20, color: Colors.white)
+                  ? const Icon(Icons.person, size: 20, color: Colors.white)
                   : null,
         ),
       ),

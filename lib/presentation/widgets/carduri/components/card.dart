@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test1/presentation/widgets/carduri/components/icon_card.dart';
+import 'icon_card.dart';
 
 class CardComponent extends StatelessWidget {
-  final String titlu;
-  final String nume;
-  final String data;
-
   const CardComponent({
     super.key,
     required this.titlu,
     required this.data,
     required this.nume,
   });
+
+  final String titlu;
+  final String nume;
+  final String data;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class CardComponent extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),
@@ -45,7 +45,7 @@ class CardComponent extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  IconCard(icon: Icons.image),
+                  const IconCard(icon: Icons.image),
                   const SizedBox(width: 16),
                   Expanded(
                     child: Column(

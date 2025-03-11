@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test1/presentation/widgets/avatar.dart';
-import 'package:flutter_test1/presentation/widgets/carduri/lista_carduri.dart';
-import 'package:flutter_test1/presentation/widgets/calculator/calculator_form.dart';
+
+import '../widgets/avatar.dart';
+import '../widgets/calculator/calculator_form.dart';
+import '../widgets/carduri/lista_carduri.dart';
 
 class LandingPage extends StatefulWidget {
-  static const String route = '/';
   const LandingPage({super.key, required this.appTitle});
+  static const String route = '/';
 
   final String appTitle;
 
@@ -19,7 +20,10 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.appTitle), actions: [Avatar()]),
+      appBar: AppBar(
+        title: Text(widget.appTitle),
+        actions: const <Widget>[Avatar()],
+      ),
       body: getCurrentPage(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: pageIndex,
@@ -28,7 +32,7 @@ class _LandingPageState extends State<LandingPage> {
             pageIndex = index;
           });
         },
-        items: [
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.file_copy),
@@ -42,11 +46,11 @@ class _LandingPageState extends State<LandingPage> {
   Widget getCurrentPage() {
     switch (pageIndex) {
       case 0:
-        return CalculatorForm();
+        return const CalculatorForm();
       case 1:
-        return ListaCarduri();
+        return const ListaCarduri();
       default:
-        return CalculatorForm();
+        return const CalculatorForm();
     }
   }
 }

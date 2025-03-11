@@ -26,16 +26,19 @@ class AppFormField extends StatelessWidget {
           ),
           filled: true,
           fillColor: Colors.grey.shade300,
-          contentPadding: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
+          contentPadding: const EdgeInsets.symmetric(
+            vertical: 50,
+            horizontal: 10,
+          ),
         ),
-        style: TextStyle(fontSize: 24),
+        style: const TextStyle(fontSize: 24),
         controller: controller1,
-        inputFormatters: [
+        inputFormatters: <TextInputFormatter>[
           FilteringTextInputFormatter.allow(RegExp(r'^\d*[\.]?\d*$')),
         ],
-        validator: (value) {
+        validator: (String? value) {
           if (value == null || value.isEmpty) {
-            return "Introdu un nr";
+            return 'Introdu un nr';
           }
           return null;
         },

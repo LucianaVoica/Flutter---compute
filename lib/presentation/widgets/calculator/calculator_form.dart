@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test1/presentation/widgets/calculator/form_field.dart';
 
-import 'package:flutter_test1/services/compute_service.dart';
-import 'package:flutter_test1/common/operation_enum.dart';
+import '../../../common/operation_enum.dart';
+import '../../../services/compute_service.dart';
+import 'form_field.dart';
 
 class CalculatorForm extends StatefulWidget {
   const CalculatorForm({super.key});
@@ -45,17 +45,17 @@ class CalculatorFormState extends State<CalculatorForm> {
       key: formKey,
       child: Column(
         children: <Widget>[
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: <Widget>[
               AppFormField(controller1: controller1),
-              SizedBox(width: 20),
+              const SizedBox(width: 20),
               AppFormField(controller1: controller2),
             ],
           ),
 
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {
               setState(() {
@@ -67,13 +67,13 @@ class CalculatorFormState extends State<CalculatorForm> {
               });
             },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
-            child: Text(
-              "Suma",
+            child: const Text(
+              'Suma',
               style: TextStyle(color: Colors.black, fontSize: 24),
             ),
           ),
 
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               setState(() {
@@ -85,13 +85,13 @@ class CalculatorFormState extends State<CalculatorForm> {
               });
             },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-            child: Text(
-              "Diferenta",
+            child: const Text(
+              'Diferenta',
               style: TextStyle(color: Colors.black, fontSize: 24),
             ),
           ),
 
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               setState(() {
@@ -103,10 +103,10 @@ class CalculatorFormState extends State<CalculatorForm> {
               });
             },
             style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-            child: Text("Produs", style: TextStyle(color: Colors.white)),
+            child: const Text('Produs', style: TextStyle(color: Colors.white)),
           ),
 
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               setState(() {
@@ -117,9 +117,9 @@ class CalculatorFormState extends State<CalculatorForm> {
                 );
               });
             },
-            child: Text("Impartire", style: TextStyle(color: Colors.red)),
+            child: const Text('Impartire', style: TextStyle(color: Colors.red)),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           if (result != null)
             Container(
               width: 320,
@@ -127,13 +127,13 @@ class CalculatorFormState extends State<CalculatorForm> {
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.blue.shade100, Colors.blue.shade500],
+                  colors: <Color>[Colors.blue.shade100, Colors.blue.shade500],
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                 ),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Text("$result", style: TextStyle(fontSize: 20)),
+              child: Text('$result', style: const TextStyle(fontSize: 20)),
             ),
         ],
       ),

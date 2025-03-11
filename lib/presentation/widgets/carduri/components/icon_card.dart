@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class IconCard extends StatelessWidget {
-  final IconData icon;
   const IconCard({super.key, required this.icon});
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
